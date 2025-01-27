@@ -315,6 +315,9 @@ To ensure your site is deployed correctly, manually enable GitHub Pages:
 3. **Set the Deployment Source**
    - Under **"Build and Deployment"**, select **"GitHub Actions"** as the source.
    - Click **"Save"**.
+   - Choose **"Deploy from a branch"** option now that its available.
+   - Under **"Branch"**, select `gh-pages` as the source.
+   - Click **"Save"**.
 
 4. **Check the Deployment Status**
    - After enabling GitHub Pages, the site will be deployed automatically.
