@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://jdevto.github.io/mkdocs-demo/</loc>
+         <lastmod>2025-01-27</lastmod>
+    </url>
+    <url>
+         <loc>https://jdevto.github.io/mkdocs-demo/guides/advanced/</loc>
+         <lastmod>2025-01-27</lastmod>
+    </url>
+    <url>
+         <loc>https://jdevto.github.io/mkdocs-demo/guides/intro/</loc>
+         <lastmod>2025-01-27</lastmod>
+    </url>
+    <url>
+         <loc>https://jdevto.github.io/mkdocs-demo/tutorials/deployment/</loc>
+         <lastmod>2025-01-27</lastmod>
+    </url>
+    <url>
+         <loc>https://jdevto.github.io/mkdocs-demo/tutorials/setup/</loc>
+         <lastmod>2025-01-27</lastmod>
+    </url>
+</urlset>
