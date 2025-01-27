@@ -299,7 +299,66 @@ This workflow:
 
 ---
 
-## **9️⃣ Deploy to GitHub Pages**
+## **9️⃣ Enable GitHub Pages**
+
+To ensure your site is deployed correctly, manually enable GitHub Pages:
+
+### **For Personal Repositories:**
+
+1. **Go to Repository Settings**
+   - Navigate to your repository on GitHub.
+   - Click on **"Settings"** (⚙️) in the top navigation bar.
+
+2. **Find the Pages Section**
+   - Scroll down to the **"Pages"** section in the left sidebar.
+
+3. **Set the Deployment Source**
+   - Under **"Build and Deployment"**, select **"GitHub Actions"** as the source.
+   - Click **"Save"**.
+
+4. **Check the Deployment Status**
+   - After enabling GitHub Pages, the site will be deployed automatically.
+   - Your site will be available at:
+
+     ```plaintext
+     https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/
+     ```
+
+5. **Verify the Site**
+   - Open the provided URL in a browser.
+   - If the page does not load immediately, wait a few minutes and refresh.
+
+### **For Organization Repositories (Extra Step Required)**
+
+GitHub **disables public GitHub Pages by default** for organization repositories. If deploying within an organization, an admin must **enable Pages** manually:
+
+1. **Go to Organization Settings**
+   - Navigate to the organization on GitHub.
+   - Click on **"Settings"** (⚙️) in the top navigation bar.
+
+2. **Enable Public Pages**
+   - In the left sidebar, select **"Policies" → "Member privileges"**.
+   - Scroll down to **"Pages creation"**.
+   - Check the box **"Public"** to allow publishing public GitHub Pages.
+   - Click **"Save"**.
+
+3. **Enable GitHub Pages for the Repository**
+   - Follow the standard **GitHub Pages setup** steps above.
+
+4. **Check Deployment Status**
+   - Your site will be available at:
+
+     ```plaintext
+     https://YOUR_ORG.github.io/YOUR_REPOSITORY/
+     ```
+
+5. **Verify the Site**
+   - Open the provided URL in a browser.
+   - If the page does not load immediately, wait a few minutes and refresh.
+
+---
+
+## **🔟 Deploy to GitHub Pages**
 
 Push your code to GitHub:
 
@@ -312,14 +371,6 @@ git push origin dev
 ```
 
 Once changes are reviewed and merged into `main`, the GitHub Actions workflow will automatically deploy the site to GitHub Pages.
-
----
-
-Your site will be available at:
-
-```plaintext
-https://YOUR_USERNAME.github.io/mkdocs-demo/
-```
 
 ---
 
