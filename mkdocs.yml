@@ -1,0 +1,88 @@
+# Project Information
+site_name: mkdocs
+site_url: https://jdevto.github.io/mkdocs-demo/
+site_author: Jdevto
+
+# GitHub Repository Configuration
+repo_name: jdevto/mkdocs-demo
+repo_url: https://github.com/jdevto/mkdocs-demo
+
+# Markdown Extensions for Enhanced Functionality
+markdown_extensions:
+  - toc:
+      baselevel: 2
+      permalink: true
+  - admonition # Callout boxes
+  - footnotes # Footnote support
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+# Plugins for Extended Functionality
+plugins:
+  - include_dir_to_nav:
+      recurse: true
+      sort_file: true
+      sort_directory: true
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - awesome-pages:
+      collapse_single_pages: true
+      strict: false
+  - mkdocs-nav-weight:
+      section_renamed: false
+      index_weight: -10
+      warning: true
+      reverse: false
+  - git-committers:
+      repository: jdevto/mkdocs-demo
+      branch: main
+
+# Theme Configuration
+theme:
+  name: material
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  features:
+    - content.code.copy
+    - content.code.annotate
+
+# Custom JavaScript and CSS
+extra_javascript:
+  - "javascripts/extra.js"
+extra_css:
+  - "stylesheets/extra.css"
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Guides:
+      - Introduction: guides/intro.md
+      - Advanced Topics: guides/advanced.md
+  - Tutorials:
+      - Setup Guide: tutorials/setup.md
+      - Deployment Guide: tutorials/deployment.md

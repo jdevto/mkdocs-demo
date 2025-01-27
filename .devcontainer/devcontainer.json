@@ -1,0 +1,43 @@
+{
+  "name": "MkDocs DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers-extra/features/curl-apt-get:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "Gruntfuggly.todo-tree",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.mypy",
+        "streetsidesoftware.code-spell-checker",
+        "vscode-icons-team.vscode-icons"
+      ]
+    },
+    "settings": {
+      "editor.formatOnSave": true,
+      "editor.tabSize": 4,
+      "files.trimTrailingWhitespace": true,
+      "files.insertFinalNewline": true,
+      "python.formatting.provider": "black",
+      "python.linting.enabled": true,
+      "python.linting.flake8Enabled": true,
+      "python.linting.mypyEnabled": true,
+      "workbench.iconTheme": "vscode-icons",
+      "workbench.colorTheme": "Visual Studio Dark"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "forwardPorts": [8000]
+}

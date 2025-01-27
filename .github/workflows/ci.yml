@@ -1,0 +1,39 @@
+name: ci
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-(${{ env.cache_id }})
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: |
+          pip install \
+            pymdown-extensions \
+            mkdocs-minify-plugin \
+            mkdocs-git-revision-date-localized-plugin \
+            mkdocs-include-dir-to-nav \
+            mkdocs-git-committers-plugin-2 \
+            mkdocs-redirects \
+            mkdocs-awesome-pages-plugin \
+            mkdocs-nav-weight \
+            mkdocs-git-authors-plugin \
+            mkdocs-exclude-search \
+            mkdocs-material
+
+      - run: mkdocs gh-deploy --force
